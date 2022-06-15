@@ -13,6 +13,8 @@ import java.util.Arrays;
 
 public class Kata {
   public static int[] squareOrSquareRoot(int[] array) {
-        return Arrays.stream(array).boxed().map(x -> (Math.sqrt(x) % 1 == 0) ? (int)Math.sqrt(x) : x * x).mapToInt(i -> i).toArray(); 
+        return Arrays.stream(array)
+                        .map(x -> (Math.sqrt(x) % 1 == 0) ? (int)Math.sqrt(x) : x * x)
+                        .toArray();
   }
 }
