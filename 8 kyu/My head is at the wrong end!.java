@@ -13,8 +13,7 @@ import java.util.stream.*;
 
 public class WrongEndHead {
   public static String[] fixTheMeerkat(String[] arr) {
-        List<String> swapped = Arrays.asList(arr);
-        Collections.swap(swapped,0,2);
+        Collections.swap(Arrays.asList(arr),0,2);
         return swapped.stream()
                         .toArray(String[]::new);
   }
