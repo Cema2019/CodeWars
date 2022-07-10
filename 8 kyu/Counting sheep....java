@@ -16,10 +16,9 @@ import java.util.Arrays;
 
 public class Counter {
   public int countSheeps(Boolean[] arrayOfSheeps) {
-    if (arrayOfSheeps == null || arrayOfSheeps.length == 0) return 0;
-        return (int) Arrays.stream(arrayOfSheeps)
-                .filter(i -> i != null)
-                .filter(i -> i == true)
-                .count();
+    return (int) Arrays.stream(arrayOfSheeps)
+                        .filter(i -> i != null)
+                        .filter(i -> i == true)
+                        .count();
   }
 }
